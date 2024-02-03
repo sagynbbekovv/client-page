@@ -1,0 +1,69 @@
+.box-route {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+}
+
+.imageUrl {
+    border-radius: 8px;
+
+    display: block;
+
+    height: 200px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.title {
+    color: #000;
+    font-family: "Nunito", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
+    height: 52px;
+}
+
+.description {
+    color: gray;
+    flex-grow: 1;
+    font-size: 13px;
+
+    line-height: 23px;
+
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
+    height: 70px;
+}
