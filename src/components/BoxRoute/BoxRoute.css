@@ -67,3 +67,10 @@
 
     height: 70px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .title {
+        height: 25px;
+    }
+}

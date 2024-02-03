@@ -130,3 +130,31 @@
     padding: 20px;
 }
 
+@media screen and (max-width: 725px) {
+    .announcement-title {
+        font-size: 14px;
+    }
+
+    .announcement-detailed-info {
+        gap: 10px;
+    }
+
+    .announcement-info-item {
+        gap: 10px;
+    }
+
+    .pet-type {
+        font-size: 12px;
+    }
+
+    .announcement-image {
+        margin: 50px auto;
+    }
+
+    .announcement-description {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+
+}
