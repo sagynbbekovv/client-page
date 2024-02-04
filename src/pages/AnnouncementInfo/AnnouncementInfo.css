@@ -4,6 +4,11 @@
     gap: 25px;
 }
 
+.announcement-info {
+    animation: appear .5s linear;
+    padding: 5px;
+}
+
 .announcement-title {
     font-family: "Nunito", sans-serif;
     font-size: 23px;
@@ -39,6 +44,12 @@
     font-weight: 500;
 }
 
+.announcement-image-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .announcement-image {
     border-radius: 5px;
 
@@ -50,6 +61,10 @@
     margin: 0 auto;
 
     object-fit: cover;
+}
+
+.active {
+    border: 3px solid #8f00ff;
 }
 
 .announcement-contact {
@@ -97,6 +112,8 @@
     top: 0;
     width: 100%;
     z-index: 999;
+
+    animation: appear .2s ease-in-out;
 }
 
 .announcement-contact-inner-box {
@@ -113,9 +130,10 @@
     width: 400px;
     min-height: 200px;
 
-    padding: 10px;
+    padding: 1px;
 
     position: relative;
+    animation: appear .5s linear;
 }
 
 .xmark {
@@ -130,31 +148,75 @@
     padding: 20px;
 }
 
-@media screen and (max-width: 725px) {
+
+
+
+
+@media screen and (max-width: 755px) {
+    /*.announcement-title {*/
+    /*    font-size: 15px;*/
+    /*}*/
+
+    /*.announcement-info-item {*/
+    /*    gap: 15px;*/
+    /*}*/
+
+    /*.pet-type {*/
+    /*    font-size: 10px;*/
+    /*}*/
+
+    /*.announcement-description {*/
+    /*    font-size: 10px;*/
+    /*    gap: 15px;*/
+    /*}*/
+
+    /*.announcement-detailed-info {*/
+    /*    gap: 10px;*/
+    /*}*/
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .first-order {
+        order: 2;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .announcement-contact-inner-box {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 355px) {
     .announcement-title {
-        font-size: 14px;
-    }
-
-    .announcement-detailed-info {
-        gap: 10px;
-    }
-
-    .announcement-info-item {
-        gap: 10px;
+        font-size: 16px;
     }
 
     .pet-type {
-        font-size: 12px;
+        font-size: 13px;
     }
 
-    .announcement-image {
-        margin: 50px auto;
+    .announcement-info-item {
+        gap: 13px;
     }
 
     .announcement-description {
-        font-size: 12px;
-        gap: 10px;
+        font-size: 13px;
+        gap: 13px;
     }
 
+    .announcement-detailed-info {
+        gap: 13px;
+    }
+}
 
+.bb {
+    border-bottom: 2px solid #dcdcdc;
 }

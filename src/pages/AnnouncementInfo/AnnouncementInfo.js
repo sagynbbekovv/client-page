@@ -1,17 +1,23 @@
 import React, {useState} from 'react';
-import image from '../../dog.jpg'
 import Button from "../../components/Button/Button";
+// import image from '../../dog.jpg'
 import './AnnouncementInfo.css'
-import {Link, Route, Routes} from "react-router-dom";
+import {Link} from "react-router-dom";
+import ImgSlider from "../../components/ImgSlider/ImgSlider";
 
 const AnnouncementInfo = () => {
     const [show, setShow] = useState(false)
 
+    const slides = [
+        {url: "https://cdn.britannica.com/92/212692-050-D53981F5/labradoodle-dog-stick-running-grass.jpg", title: "black dog"},
+        {url: "http://localhost:3000/static/media/dog.8715bddd4ee643e96fe2.jpg", title: "white dog"},
+    ]
+
     return (
         <div className="announcement-info">
             <div className="row">
-                <div className="col-6">
-                    <Link to="/"><li className="fa-solid fa-long-arrow-left"></li></Link>
+                <div className="col-6 first-order">
+                    <Link to="/myorgs/v-teplye-ruki" className="arrow"><li className="fa-solid fa-long-arrow-left"></li></Link>
                     <div className="box announcement-info-item pading">
                         {/* TITLE */}
                         <h1 className="announcement-title">Отдам в добрые руки! Мать восточная овчарка, отец немецкой породы</h1>
@@ -51,11 +57,13 @@ const AnnouncementInfo = () => {
 
                     </div>
                 </div>
-                <div className="col-6">
-                    <div className="box">
+                <div className="col-6 second-order">
+                    <div className="box announcement-image-box">
 
                         {/* IMAGE */}
-                        <img className="announcement-image" src={image} alt=""/>
+                        <div className="image-slider">
+                            <ImgSlider slides={slides}/>
+                        </div>
 
                     </div>
                 </div>

@@ -68,6 +68,8 @@ a {
   gap: 10px;
 
   margin: 60px 0 0;
+
+  animation: appear .2s ease-in-out;
 }
 
 .create-box > span {
@@ -79,56 +81,36 @@ a {
 
 
 /* announcement */
-.announcement-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.announcement {
+  animation: appear .5s linear;
+  padding: 5px;
 }
 
-
-
-/* адаптация */
-@media screen and (max-width: 1024px) {
-  .container {
-    max-width: 900px;
-  }
-}
-
-@media screen and (max-width: 924px) {
-  .container {
-    max-width: 800px;
-  }
-}
-
-@media screen and (max-width: 824px) {
-  .container {
-    max-width: 700px;
-  }
-
+@media screen and (max-width: 1000px)  {
   .col-4 {
     width: 50%;
   }
 }
 
-@media screen and (max-width: 724px) {
-  .container {
-    max-width: 500px;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 590px)  {
   .col-4 {
     width: 100%;
   }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
 
-/*@media screen and (max-width: 550px) {*/
-/*  .col-4 {*/
-/*    width: 100%;*/
-/*  }*/
+  100% {
+    opacity: 1;
+  }
+}
 
-/*  .container {*/
-/*    max-width: 300px;*/
-/*  }*/
-/*}*/
+.announcement-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* announcement*/
